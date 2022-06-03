@@ -11,11 +11,12 @@ namespace RegexProblems
         const string FNAME = "^[A-Z]{1}[a-z]{2,}$";
         const string LNAME = "^[A-Z]{1}[a-z]{2,}$";
         const string EMAIL = "^(abc).?[a-z]{3,}[@](bl).?(co).?[a-z]{2,}$";
+        const string CONTACT = "^[0-9]{1,3}[ ][789][0-9]{9}$";
         public void RegexFirstNameChecker(string firstName)
         {
             if (Regex.IsMatch(firstName, FNAME))
             {
-                Console.WriteLine("First name is valid.");
+                Console.WriteLine("\nFirst name is valid.");
                 return;
             }
             Console.WriteLine("First name is not valid.");
@@ -37,6 +38,15 @@ namespace RegexProblems
                 return;
             }
             Console.WriteLine("E-Mail id is not valid.");
+        }
+        public void RegexMobileChecker(string mobile)
+        {
+            if (Regex.IsMatch(mobile, CONTACT))
+            {
+                Console.WriteLine("Mobile no. is valid.");
+                return;
+            }
+            Console.WriteLine("Mobile no. is not valid.");
         }
     }
 }

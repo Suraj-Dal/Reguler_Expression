@@ -4,5 +4,8 @@ Console.Write("First Name:");
 string fName = Console.ReadLine();
 Console.Write("Last Name:");
 string lName = Console.ReadLine();
+Console.Write("Last Name:");
+string email = Console.ReadLine();
 reg.RegexFirstNameChecker(fName);
 reg.RegexLastNameChecker(lName);
+reg.RegexEmailChecker(email);
